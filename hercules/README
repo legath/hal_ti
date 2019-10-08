@@ -1,0 +1,11 @@
+The TI Hercules HAL provides core and peripheral hardware drivers for the
+Texas Instruments Hercules family of SoCs.
+
+This HAL was generated using the TI HALCoGen utility, and was refactored and
+customised for integration into the Zephyr codebase.
+
+
+IMPORTANT NOTE:
+  This is a preliminary HAL implementation intended for use only with RM46L852
+  SoC. It will be updated to support more variants as development progresses
+  and eventually generalised to support all Hercules family SoCs.
