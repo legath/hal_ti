@@ -92,20 +92,20 @@ extern void phantomInterrupt(void) __attribute__ ((weak, interrupt("IRQ")));
 /* Configuration registers */
 typedef struct vim_config_reg
 {
-    uint32 CONFIG_FIRQPR0;
-    uint32 CONFIG_FIRQPR1;
-    uint32 CONFIG_FIRQPR2;
-    uint32 CONFIG_FIRQPR3;
-    uint32 CONFIG_REQMASKSET0;
-    uint32 CONFIG_REQMASKSET1;
-    uint32 CONFIG_REQMASKSET2;
-    uint32 CONFIG_REQMASKSET3;
-    uint32 CONFIG_WAKEMASKSET0;
-    uint32 CONFIG_WAKEMASKSET1;
-    uint32 CONFIG_WAKEMASKSET2;
-    uint32 CONFIG_WAKEMASKSET3;
-    uint32 CONFIG_CAPEVT;
-    uint32 CONFIG_CHANCTRL[32U];
+    uint32 VIM_CONFIG_FIRQPR0;
+    uint32 VIM_CONFIG_FIRQPR1;
+    uint32 VIM_CONFIG_FIRQPR2;
+    uint32 VIM_CONFIG_FIRQPR3;
+    uint32 VIM_CONFIG_REQMASKSET0;
+    uint32 VIM_CONFIG_REQMASKSET1;
+    uint32 VIM_CONFIG_REQMASKSET2;
+    uint32 VIM_CONFIG_REQMASKSET3;
+    uint32 VIM_CONFIG_WAKEMASKSET0;
+    uint32 VIM_CONFIG_WAKEMASKSET1;
+    uint32 VIM_CONFIG_WAKEMASKSET2;
+    uint32 VIM_CONFIG_WAKEMASKSET3;
+    uint32 VIM_CONFIG_CAPEVT;
+    uint32 VIM_CONFIG_CHANCTRL[32U];
 } vim_config_reg_t;
 
 /* Configuration registers initial value */

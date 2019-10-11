@@ -675,14 +675,14 @@ typedef enum esmSelfTestFlag
 /* Configuration registers */
 typedef struct esm_config_reg
 {
-    uint32 CONFIG_EEPAPR1;
-    uint32 CONFIG_IESR1;
-    uint32 CONFIG_ILSR1;
-    uint32 CONFIG_LTCPR;
-	uint32 CONFIG_EKR;
-    uint32 CONFIG_IEPSR4;
-    uint32 CONFIG_IESR4;
-    uint32 CONFIG_ILSR4;
+    uint32 ESM_CONFIG_EEPAPR1;
+    uint32 ESM_CONFIG_IESR1;
+    uint32 ESM_CONFIG_ILSR1;
+    uint32 ESM_CONFIG_LTCPR;
+	uint32 ESM_CONFIG_EKR;
+    uint32 ESM_CONFIG_IEPSR4;
+    uint32 ESM_CONFIG_IESR4;
+    uint32 ESM_CONFIG_ILSR4;
 } esm_config_reg_t;
 
 /* Configuration registers initial value */

@@ -149,16 +149,16 @@ enum pbistAlgo
 /* PBIST configuration registers */
 typedef struct pbist_config_reg
 {
-    uint32 CONFIG_RAMT;
-    uint32 CONFIG_DLR;
-    uint32 CONFIG_PACT;
-    uint32 CONFIG_PBISTID;
-    uint32 CONFIG_OVER;
-    uint32 CONFIG_FSRDL1;
-    uint32 CONFIG_ROM;
-    uint32 CONFIG_ALGO;
-    uint32 CONFIG_RINFOL;
-    uint32 CONFIG_RINFOU;
+    uint32 PBIST_CONFIG_RAMT;
+    uint32 PBIST_CONFIG_DLR;
+    uint32 PBIST_CONFIG_PACT;
+    uint32 PBIST_CONFIG_PBISTID;
+    uint32 PBIST_CONFIG_OVER;
+    uint32 PBIST_CONFIG_FSRDL1;
+    uint32 PBIST_CONFIG_ROM;
+    uint32 PBIST_CONFIG_ALGO;
+    uint32 PBIST_CONFIG_RINFOL;
+    uint32 PBIST_CONFIG_RINFOU;
 } pbist_config_reg_t;
 
 /* PBIST and STC ROM - PBIST RAM GROUPING */
@@ -216,10 +216,10 @@ void pbistGetConfigValue(pbist_config_reg_t *config_reg, config_value_type_t typ
 /* Configuration registers */
 typedef struct stc_config_reg
 {
-	uint32 CONFIG_STCGCR0;
-    uint32 CONFIG_STCGCR1;
-    uint32 CONFIG_STCTPR;
-    uint32 CONFIG_STCSCSCR;
+	uint32 STC_CONFIG_STCGCR0;
+    uint32 STC_CONFIG_STCGCR1;
+    uint32 STC_CONFIG_STCTPR;
+    uint32 STC_CONFIG_STCSCSCR;
 } stc_config_reg_t;
 
 /* Configuration registers initial value */
@@ -329,10 +329,10 @@ void stcGetConfigValue(stc_config_reg_t *config_reg, config_value_type_t type);
 /* Configuration registers */
 typedef struct efc_config_reg
 {
-	uint32 CONFIG_BOUNDARY;
-	uint32 CONFIG_PINS;
-	uint32 CONFIG_SELFTESTCYCLES;
-	uint32 CONFIG_SELFTESTSIGN;
+	uint32 EFC_CONFIG_BOUNDARY;
+	uint32 EFC_CONFIG_PINS;
+	uint32 EFC_CONFIG_SELFTESTCYCLES;
+	uint32 EFC_CONFIG_SELFTESTSIGN;
 }efc_config_reg_t;
 
 /* Configuration registers initial value */
@@ -451,7 +451,7 @@ void errata_PBIST_4(void);
 /* Configuration registers */
 typedef struct ccmr4_config_reg
 {
-	uint32 CONFIG_CCMKEYR;
+	uint32 CCMR4_CONFIG_CCMKEYR;
 }ccmr4_config_reg_t;
 
 /* Configuration registers initial value */

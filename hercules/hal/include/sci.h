@@ -95,17 +95,17 @@ enum sciPinSelect
 /* Configuration registers */
 typedef struct sci_config_reg
 {
-    uint32 CONFIG_GCR0;
-    uint32 CONFIG_GCR1;
-    uint32 CONFIG_SETINT;
-    uint32 CONFIG_SETINTLVL;
-    uint32 CONFIG_FORMAT;
-    uint32 CONFIG_BRS;
-    uint32 CONFIG_PIO0;
-    uint32 CONFIG_PIO1;
-    uint32 CONFIG_PIO6;
-    uint32 CONFIG_PIO7;
-	uint32 CONFIG_PIO8;
+    uint32 SCI_CONFIG_GCR0;
+    uint32 SCI_CONFIG_GCR1;
+    uint32 SCI_CONFIG_SETINT;
+    uint32 SCI_CONFIG_SETINTLVL;
+    uint32 SCI_CONFIG_FORMAT;
+    uint32 SCI_CONFIG_BRS;
+    uint32 SCI_CONFIG_PIO0;
+    uint32 SCI_CONFIG_PIO1;
+    uint32 SCI_CONFIG_PIO6;
+    uint32 SCI_CONFIG_PIO7;
+	uint32 SCI_CONFIG_PIO8;
 } sci_config_reg_t;
 
 

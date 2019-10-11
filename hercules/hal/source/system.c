@@ -376,89 +376,89 @@ void systemGetConfigValue(system_config_reg_t *config_reg, config_value_type_t t
 {
     if (type == InitialValue)
     {
-        config_reg->CONFIG_SYSPC1 = SYS_SYSPC1_CONFIGVALUE;
-        config_reg->CONFIG_SYSPC2 = SYS_SYSPC2_CONFIGVALUE;
-        config_reg->CONFIG_SYSPC7 = SYS_SYSPC7_CONFIGVALUE;
-        config_reg->CONFIG_SYSPC8 = SYS_SYSPC8_CONFIGVALUE;
-        config_reg->CONFIG_SYSPC9 = SYS_SYSPC9_CONFIGVALUE;
-        config_reg->CONFIG_CSDIS = SYS_CSDIS_CONFIGVALUE;
-        config_reg->CONFIG_CDDIS = SYS_CDDIS_CONFIGVALUE;
-        config_reg->CONFIG_GHVSRC = SYS_GHVSRC_CONFIGVALUE;
-        config_reg->CONFIG_VCLKASRC = SYS_VCLKASRC_CONFIGVALUE;
-        config_reg->CONFIG_RCLKSRC = SYS_RCLKSRC_CONFIGVALUE;
-        config_reg->CONFIG_MSTGCR = SYS_MSTGCR_CONFIGVALUE;
-        config_reg->CONFIG_MINITGCR = SYS_MINITGCR_CONFIGVALUE;
-        config_reg->CONFIG_MSINENA = SYS_MSINENA_CONFIGVALUE;
-        config_reg->CONFIG_PLLCTL1 = SYS_PLLCTL1_CONFIGVALUE_2;
-        config_reg->CONFIG_PLLCTL2 = SYS_PLLCTL2_CONFIGVALUE;
-        config_reg->CONFIG_UERFLAG = SYS_UERFLAG_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_SYSPC1 = SYS_SYSPC1_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_SYSPC2 = SYS_SYSPC2_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_SYSPC7 = SYS_SYSPC7_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_SYSPC8 = SYS_SYSPC8_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_SYSPC9 = SYS_SYSPC9_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_CSDIS = SYS_CSDIS_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_CDDIS = SYS_CDDIS_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_GHVSRC = SYS_GHVSRC_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_VCLKASRC = SYS_VCLKASRC_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_RCLKSRC = SYS_RCLKSRC_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_MSTGCR = SYS_MSTGCR_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_MINITGCR = SYS_MINITGCR_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_MSINENA = SYS_MSINENA_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_PLLCTL1 = SYS_PLLCTL1_CONFIGVALUE_2;
+        config_reg->SYSTEM_CONFIG_PLLCTL2 = SYS_PLLCTL2_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_UERFLAG = SYS_UERFLAG_CONFIGVALUE;
         /*SAFETYMCUSW 139 S MR:13.7 <APPROVED> "Hardware status bit read check" */
         if(LPO_TRIM_VALUE != 0xFFFFU)
         {
-            config_reg->CONFIG_LPOMONCTL = SYS_LPOMONCTL_CONFIGVALUE_1;
+            config_reg->SYSTEM_CONFIG_LPOMONCTL = SYS_LPOMONCTL_CONFIGVALUE_1;
         }
         else
         {
-            config_reg->CONFIG_LPOMONCTL = SYS_LPOMONCTL_CONFIGVALUE_2;
+            config_reg->SYSTEM_CONFIG_LPOMONCTL = SYS_LPOMONCTL_CONFIGVALUE_2;
         }
-        config_reg->CONFIG_CLKTEST = SYS_CLKTEST_CONFIGVALUE;
-        config_reg->CONFIG_DFTCTRLREG1 = SYS_DFTCTRLREG1_CONFIGVALUE;
-        config_reg->CONFIG_DFTCTRLREG2 = SYS_DFTCTRLREG2_CONFIGVALUE;
-        config_reg->CONFIG_GPREG1 = SYS_GPREG1_CONFIGVALUE;
-        config_reg->CONFIG_RAMGCR = SYS_RAMGCR_CONFIGVALUE;
-        config_reg->CONFIG_BMMCR1 = SYS_BMMCR1_CONFIGVALUE;
-        config_reg->CONFIG_MMUGCR = SYS_MMUGCR_CONFIGVALUE;
-        config_reg->CONFIG_CLKCNTL = SYS_CLKCNTL_CONFIGVALUE;
-        config_reg->CONFIG_ECPCNTL = SYS_ECPCNTL_CONFIGVALUE;
-        config_reg->CONFIG_DEVCR1 = SYS_DEVCR1_CONFIGVALUE;
-        config_reg->CONFIG_SYSECR = SYS_SYSECR_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_CLKTEST = SYS_CLKTEST_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_DFTCTRLREG1 = SYS_DFTCTRLREG1_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_DFTCTRLREG2 = SYS_DFTCTRLREG2_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_GPREG1 = SYS_GPREG1_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_RAMGCR = SYS_RAMGCR_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_BMMCR1 = SYS_BMMCR1_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_MMUGCR = SYS_MMUGCR_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_CLKCNTL = SYS_CLKCNTL_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_ECPCNTL = SYS_ECPCNTL_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_DEVCR1 = SYS_DEVCR1_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_SYSECR = SYS_SYSECR_CONFIGVALUE;
 
-        config_reg->CONFIG_PLLCTL3 = SYS2_PLLCTL3_CONFIGVALUE_2;
-        config_reg->CONFIG_STCCLKDIV = SYS2_STCCLKDIV_CONFIGVALUE;
-        config_reg->CONFIG_CLK2CNTL = SYS2_CLK2CNTL_CONFIGVALUE;
-        config_reg->CONFIG_VCLKACON1 = SYS2_VCLKACON1_CONFIGVALUE;
-        config_reg->CONFIG_CLKSLIP = SYS2_CLKSLIP_CONFIGVALUE;
-        config_reg->CONFIG_EFC_CTLEN = SYS2_EFC_CTLEN_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_PLLCTL3 = SYS2_PLLCTL3_CONFIGVALUE_2;
+        config_reg->SYSTEM_CONFIG_STCCLKDIV = SYS2_STCCLKDIV_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_CLK2CNTL = SYS2_CLK2CNTL_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_VCLKACON1 = SYS2_VCLKACON1_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_CLKSLIP = SYS2_CLKSLIP_CONFIGVALUE;
+        config_reg->SYSTEM_CONFIG_EFC_CTLEN = SYS2_EFC_CTLEN_CONFIGVALUE;
     }
     else
     {
     /*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */
-        config_reg->CONFIG_SYSPC1 = systemREG1->SYSPC1;
-        config_reg->CONFIG_SYSPC2 = systemREG1->SYSPC2;
-        config_reg->CONFIG_SYSPC7 = systemREG1->SYSPC7;
-        config_reg->CONFIG_SYSPC8 = systemREG1->SYSPC8;
-        config_reg->CONFIG_SYSPC9 = systemREG1->SYSPC9;
-        config_reg->CONFIG_CSDIS = systemREG1->CSDIS;
-        config_reg->CONFIG_CDDIS = systemREG1->CDDIS;
-        config_reg->CONFIG_GHVSRC = systemREG1->GHVSRC;
-        config_reg->CONFIG_VCLKASRC = systemREG1->VCLKASRC;
-        config_reg->CONFIG_RCLKSRC = systemREG1->RCLKSRC;
-        config_reg->CONFIG_MSTGCR = systemREG1->MSTGCR;
-        config_reg->CONFIG_MINITGCR = systemREG1->MINITGCR;
-        config_reg->CONFIG_MSINENA = systemREG1->MSINENA;
-        config_reg->CONFIG_PLLCTL1 = systemREG1->PLLCTL1;
-        config_reg->CONFIG_PLLCTL2 = systemREG1->PLLCTL2;
-        config_reg->CONFIG_UERFLAG = systemREG1->SYSPC10;
-        config_reg->CONFIG_LPOMONCTL = systemREG1->LPOMONCTL;
-        config_reg->CONFIG_CLKTEST = systemREG1->CLKTEST;
-        config_reg->CONFIG_DFTCTRLREG1 = systemREG1->DFTCTRLREG1;
-        config_reg->CONFIG_DFTCTRLREG2 = systemREG1->DFTCTRLREG2;
-        config_reg->CONFIG_GPREG1 = systemREG1->GPREG1;
-        config_reg->CONFIG_RAMGCR = systemREG1->RAMGCR;
-        config_reg->CONFIG_BMMCR1 = systemREG1->BMMCR1;
-        config_reg->CONFIG_MMUGCR = systemREG1->CPURSTCR;
-        config_reg->CONFIG_CLKCNTL = systemREG1->CLKCNTL;
-        config_reg->CONFIG_ECPCNTL = systemREG1->ECPCNTL;
-        config_reg->CONFIG_DEVCR1 = systemREG1->DEVCR1;
-        config_reg->CONFIG_SYSECR = systemREG1->SYSECR;
+        config_reg->SYSTEM_CONFIG_SYSPC1 = systemREG1->SYSPC1;
+        config_reg->SYSTEM_CONFIG_SYSPC2 = systemREG1->SYSPC2;
+        config_reg->SYSTEM_CONFIG_SYSPC7 = systemREG1->SYSPC7;
+        config_reg->SYSTEM_CONFIG_SYSPC8 = systemREG1->SYSPC8;
+        config_reg->SYSTEM_CONFIG_SYSPC9 = systemREG1->SYSPC9;
+        config_reg->SYSTEM_CONFIG_CSDIS = systemREG1->CSDIS;
+        config_reg->SYSTEM_CONFIG_CDDIS = systemREG1->CDDIS;
+        config_reg->SYSTEM_CONFIG_GHVSRC = systemREG1->GHVSRC;
+        config_reg->SYSTEM_CONFIG_VCLKASRC = systemREG1->VCLKASRC;
+        config_reg->SYSTEM_CONFIG_RCLKSRC = systemREG1->RCLKSRC;
+        config_reg->SYSTEM_CONFIG_MSTGCR = systemREG1->MSTGCR;
+        config_reg->SYSTEM_CONFIG_MINITGCR = systemREG1->MINITGCR;
+        config_reg->SYSTEM_CONFIG_MSINENA = systemREG1->MSINENA;
+        config_reg->SYSTEM_CONFIG_PLLCTL1 = systemREG1->PLLCTL1;
+        config_reg->SYSTEM_CONFIG_PLLCTL2 = systemREG1->PLLCTL2;
+        config_reg->SYSTEM_CONFIG_UERFLAG = systemREG1->SYSPC10;
+        config_reg->SYSTEM_CONFIG_LPOMONCTL = systemREG1->LPOMONCTL;
+        config_reg->SYSTEM_CONFIG_CLKTEST = systemREG1->CLKTEST;
+        config_reg->SYSTEM_CONFIG_DFTCTRLREG1 = systemREG1->DFTCTRLREG1;
+        config_reg->SYSTEM_CONFIG_DFTCTRLREG2 = systemREG1->DFTCTRLREG2;
+        config_reg->SYSTEM_CONFIG_GPREG1 = systemREG1->GPREG1;
+        config_reg->SYSTEM_CONFIG_RAMGCR = systemREG1->RAMGCR;
+        config_reg->SYSTEM_CONFIG_BMMCR1 = systemREG1->BMMCR1;
+        config_reg->SYSTEM_CONFIG_MMUGCR = systemREG1->CPURSTCR;
+        config_reg->SYSTEM_CONFIG_CLKCNTL = systemREG1->CLKCNTL;
+        config_reg->SYSTEM_CONFIG_ECPCNTL = systemREG1->ECPCNTL;
+        config_reg->SYSTEM_CONFIG_DEVCR1 = systemREG1->DEVCR1;
+        config_reg->SYSTEM_CONFIG_SYSECR = systemREG1->SYSECR;
 
         /*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */
-        config_reg->CONFIG_PLLCTL3 = systemREG2->PLLCTL3;
-        config_reg->CONFIG_STCCLKDIV = systemREG2->STCCLKDIV;
-        config_reg->CONFIG_CLK2CNTL = systemREG2->CLK2CNTL;
-        config_reg->CONFIG_VCLKACON1 = systemREG2->VCLKACON1;
-        config_reg->CONFIG_CLKSLIP = systemREG2->CLKSLIP;
-        config_reg->CONFIG_EFC_CTLEN = systemREG2->EFC_CTLEN;
+        config_reg->SYSTEM_CONFIG_PLLCTL3 = systemREG2->PLLCTL3;
+        config_reg->SYSTEM_CONFIG_STCCLKDIV = systemREG2->STCCLKDIV;
+        config_reg->SYSTEM_CONFIG_CLK2CNTL = systemREG2->CLK2CNTL;
+        config_reg->SYSTEM_CONFIG_VCLKACON1 = systemREG2->VCLKACON1;
+        config_reg->SYSTEM_CONFIG_CLKSLIP = systemREG2->CLKSLIP;
+        config_reg->SYSTEM_CONFIG_EFC_CTLEN = systemREG2->EFC_CTLEN;
     }
 }
 
@@ -480,38 +480,38 @@ void tcmflashGetConfigValue(tcmflash_config_reg_t *config_reg, config_value_type
 {
     if (type == InitialValue)
     {
-        config_reg->CONFIG_FRDCNTL = TCMFLASH_FRDCNTL_CONFIGVALUE;
-        config_reg->CONFIG_FEDACCTRL1 = TCMFLASH_FEDACCTRL1_CONFIGVALUE;
-        config_reg->CONFIG_FEDACCTRL2 = TCMFLASH_FEDACCTRL2_CONFIGVALUE;
-        config_reg->CONFIG_FEDACSDIS = TCMFLASH_FEDACSDIS_CONFIGVALUE;
-        config_reg->CONFIG_FBPROT = TCMFLASH_FBPROT_CONFIGVALUE;
-        config_reg->CONFIG_FBSE = TCMFLASH_FBSE_CONFIGVALUE;
-        config_reg->CONFIG_FBAC = TCMFLASH_FBAC_CONFIGVALUE;
-        config_reg->CONFIG_FBFALLBACK = TCMFLASH_FBFALLBACK_CONFIGVALUE;
-        config_reg->CONFIG_FPAC1 = TCMFLASH_FPAC1_CONFIGVALUE;
-        config_reg->CONFIG_FPAC2 = TCMFLASH_FPAC2_CONFIGVALUE;
-        config_reg->CONFIG_FMAC = TCMFLASH_FMAC_CONFIGVALUE;
-        config_reg->CONFIG_FLOCK = TCMFLASH_FLOCK_CONFIGVALUE;
-        config_reg->CONFIG_FDIAGCTRL = TCMFLASH_FDIAGCTRL_CONFIGVALUE;
-        config_reg->CONFIG_FEDACSDIS2 = TCMFLASH_FEDACSDIS2_CONFIGVALUE;
+        config_reg->TCMFLASH_CONFIG_FRDCNTL = TCMFLASH_FRDCNTL_CONFIGVALUE;
+        config_reg->TCMFLASH_CONFIG_FEDACCTRL1 = TCMFLASH_FEDACCTRL1_CONFIGVALUE;
+        config_reg->TCMFLASH_CONFIG_FEDACCTRL2 = TCMFLASH_FEDACCTRL2_CONFIGVALUE;
+        config_reg->TCMFLASH_CONFIG_FEDACSDIS = TCMFLASH_FEDACSDIS_CONFIGVALUE;
+        config_reg->TCMFLASH_CONFIG_FBPROT = TCMFLASH_FBPROT_CONFIGVALUE;
+        config_reg->TCMFLASH_CONFIG_FBSE = TCMFLASH_FBSE_CONFIGVALUE;
+        config_reg->TCMFLASH_CONFIG_FBAC = TCMFLASH_FBAC_CONFIGVALUE;
+        config_reg->TCMFLASH_CONFIG_FBFALLBACK = TCMFLASH_FBFALLBACK_CONFIGVALUE;
+        config_reg->TCMFLASH_CONFIG_FPAC1 = TCMFLASH_FPAC1_CONFIGVALUE;
+        config_reg->TCMFLASH_CONFIG_FPAC2 = TCMFLASH_FPAC2_CONFIGVALUE;
+        config_reg->TCMFLASH_CONFIG_FMAC = TCMFLASH_FMAC_CONFIGVALUE;
+        config_reg->TCMFLASH_CONFIG_FLOCK = TCMFLASH_FLOCK_CONFIGVALUE;
+        config_reg->TCMFLASH_CONFIG_FDIAGCTRL = TCMFLASH_FDIAGCTRL_CONFIGVALUE;
+        config_reg->TCMFLASH_CONFIG_FEDACSDIS2 = TCMFLASH_FEDACSDIS2_CONFIGVALUE;
     }
     else
     {
     /*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */
-        config_reg->CONFIG_FRDCNTL = flashWREG->FRDCNTL;
-        config_reg->CONFIG_FEDACCTRL1 = flashWREG->FEDACCTRL1;
-        config_reg->CONFIG_FEDACCTRL2 = flashWREG->FEDACCTRL2;
-        config_reg->CONFIG_FEDACSDIS = flashWREG->FEDACSDIS;
-        config_reg->CONFIG_FBPROT = flashWREG->FBPROT;
-        config_reg->CONFIG_FBSE = flashWREG->FBSE;
-        config_reg->CONFIG_FBAC = flashWREG->FBAC;
-        config_reg->CONFIG_FBFALLBACK = flashWREG->FBFALLBACK;
-        config_reg->CONFIG_FPAC1 = flashWREG->FPAC1;
-        config_reg->CONFIG_FPAC2 = flashWREG->FPAC2;
-        config_reg->CONFIG_FMAC = flashWREG->FMAC;
-        config_reg->CONFIG_FLOCK = flashWREG->FLOCK;
-        config_reg->CONFIG_FDIAGCTRL = flashWREG->FDIAGCTRL;
-        config_reg->CONFIG_FEDACSDIS2 = flashWREG->FEDACSDIS2;
+        config_reg->TCMFLASH_CONFIG_FRDCNTL = flashWREG->FRDCNTL;
+        config_reg->TCMFLASH_CONFIG_FEDACCTRL1 = flashWREG->FEDACCTRL1;
+        config_reg->TCMFLASH_CONFIG_FEDACCTRL2 = flashWREG->FEDACCTRL2;
+        config_reg->TCMFLASH_CONFIG_FEDACSDIS = flashWREG->FEDACSDIS;
+        config_reg->TCMFLASH_CONFIG_FBPROT = flashWREG->FBPROT;
+        config_reg->TCMFLASH_CONFIG_FBSE = flashWREG->FBSE;
+        config_reg->TCMFLASH_CONFIG_FBAC = flashWREG->FBAC;
+        config_reg->TCMFLASH_CONFIG_FBFALLBACK = flashWREG->FBFALLBACK;
+        config_reg->TCMFLASH_CONFIG_FPAC1 = flashWREG->FPAC1;
+        config_reg->TCMFLASH_CONFIG_FPAC2 = flashWREG->FPAC2;
+        config_reg->TCMFLASH_CONFIG_FMAC = flashWREG->FMAC;
+        config_reg->TCMFLASH_CONFIG_FLOCK = flashWREG->FLOCK;
+        config_reg->TCMFLASH_CONFIG_FDIAGCTRL = flashWREG->FDIAGCTRL;
+        config_reg->TCMFLASH_CONFIG_FEDACSDIS2 = flashWREG->FEDACSDIS2;
     }
 }
 
@@ -535,33 +535,33 @@ void sramGetConfigValue(sram_config_reg_t *config_reg, config_value_type_t type)
 {
     if (type == InitialValue)
     {
-        config_reg->CONFIG_RAMCTRL[0U] = SRAM_RAMCTRL_CONFIGVALUE;
-        config_reg->CONFIG_RAMTHRESHOLD[0U] = SRAM_RAMTHRESHOLD_CONFIGVALUE;
-        config_reg->CONFIG_RAMINTCTRL[0U] = SRAM_RAMINTCTRL_CONFIGVALUE;
-        config_reg->CONFIG_RAMTEST[0U] = SRAM_RAMTEST_CONFIGVALUE;
-        config_reg->CONFIG_RAMADDRDECVECT[0U] = SRAM_RAMADDRDECVECT_CONFIGVALUE;
+        config_reg->SRAM_CONFIG_RAMCTRL[0U] = SRAM_RAMCTRL_CONFIGVALUE;
+        config_reg->SRAM_CONFIG_RAMTHRESHOLD[0U] = SRAM_RAMTHRESHOLD_CONFIGVALUE;
+        config_reg->SRAM_CONFIG_RAMINTCTRL[0U] = SRAM_RAMINTCTRL_CONFIGVALUE;
+        config_reg->SRAM_CONFIG_RAMTEST[0U] = SRAM_RAMTEST_CONFIGVALUE;
+        config_reg->SRAM_CONFIG_RAMADDRDECVECT[0U] = SRAM_RAMADDRDECVECT_CONFIGVALUE;
 
-        config_reg->CONFIG_RAMCTRL[1U] = SRAM_RAMCTRL_CONFIGVALUE;
-        config_reg->CONFIG_RAMTHRESHOLD[1U] = SRAM_RAMTHRESHOLD_CONFIGVALUE;
-        config_reg->CONFIG_RAMINTCTRL[1U] = SRAM_RAMINTCTRL_CONFIGVALUE;
-        config_reg->CONFIG_RAMTEST[1U] = SRAM_RAMTEST_CONFIGVALUE;
-        config_reg->CONFIG_RAMADDRDECVECT[1U] = SRAM_RAMADDRDECVECT_CONFIGVALUE;
+        config_reg->SRAM_CONFIG_RAMCTRL[1U] = SRAM_RAMCTRL_CONFIGVALUE;
+        config_reg->SRAM_CONFIG_RAMTHRESHOLD[1U] = SRAM_RAMTHRESHOLD_CONFIGVALUE;
+        config_reg->SRAM_CONFIG_RAMINTCTRL[1U] = SRAM_RAMINTCTRL_CONFIGVALUE;
+        config_reg->SRAM_CONFIG_RAMTEST[1U] = SRAM_RAMTEST_CONFIGVALUE;
+        config_reg->SRAM_CONFIG_RAMADDRDECVECT[1U] = SRAM_RAMADDRDECVECT_CONFIGVALUE;
     }
     else
     {
     /*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */
-        config_reg->CONFIG_RAMCTRL[0U] = tcram1REG->RAMCTRL;
-        config_reg->CONFIG_RAMTHRESHOLD[0U] = tcram1REG->RAMTHRESHOLD;
-        config_reg->CONFIG_RAMINTCTRL[0U] = tcram1REG->RAMINTCTRL;
-        config_reg->CONFIG_RAMTEST[0U] = tcram1REG->RAMTEST;
-        config_reg->CONFIG_RAMADDRDECVECT[0U] = tcram1REG->RAMADDRDECVECT;
+        config_reg->SRAM_CONFIG_RAMCTRL[0U] = tcram1REG->RAMCTRL;
+        config_reg->SRAM_CONFIG_RAMTHRESHOLD[0U] = tcram1REG->RAMTHRESHOLD;
+        config_reg->SRAM_CONFIG_RAMINTCTRL[0U] = tcram1REG->RAMINTCTRL;
+        config_reg->SRAM_CONFIG_RAMTEST[0U] = tcram1REG->RAMTEST;
+        config_reg->SRAM_CONFIG_RAMADDRDECVECT[0U] = tcram1REG->RAMADDRDECVECT;
 
         /*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */
-        config_reg->CONFIG_RAMCTRL[1U] = tcram2REG->RAMCTRL;
-        config_reg->CONFIG_RAMTHRESHOLD[1U] = tcram2REG->RAMTHRESHOLD;
-        config_reg->CONFIG_RAMINTCTRL[1U] = tcram2REG->RAMINTCTRL;
-        config_reg->CONFIG_RAMTEST[1U] = tcram2REG->RAMTEST;
-        config_reg->CONFIG_RAMADDRDECVECT[1U] = tcram2REG->RAMADDRDECVECT;
+        config_reg->SRAM_CONFIG_RAMCTRL[1U] = tcram2REG->RAMCTRL;
+        config_reg->SRAM_CONFIG_RAMTHRESHOLD[1U] = tcram2REG->RAMTHRESHOLD;
+        config_reg->SRAM_CONFIG_RAMINTCTRL[1U] = tcram2REG->RAMINTCTRL;
+        config_reg->SRAM_CONFIG_RAMTEST[1U] = tcram2REG->RAMTEST;
+        config_reg->SRAM_CONFIG_RAMADDRDECVECT[1U] = tcram2REG->RAMADDRDECVECT;
     }
 }
 

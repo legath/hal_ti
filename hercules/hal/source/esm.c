@@ -623,26 +623,26 @@ void esmGetConfigValue(esm_config_reg_t *config_reg, config_value_type_t type)
 {
 	if (type == InitialValue)
 	{
-		config_reg->CONFIG_EEPAPR1 = ESM_EEPAPR1_CONFIGVALUE;
-		config_reg->CONFIG_IESR1 = ESM_IESR1_CONFIGVALUE;
-		config_reg->CONFIG_ILSR1 = ESM_ILSR1_CONFIGVALUE;
-		config_reg->CONFIG_LTCPR = ESM_LTCPR_CONFIGVALUE;
-		config_reg->CONFIG_EKR = ESM_EKR_CONFIGVALUE;
-		config_reg->CONFIG_IEPSR4 = ESM_IEPSR4_CONFIGVALUE;
-		config_reg->CONFIG_IESR4 = ESM_IESR4_CONFIGVALUE;
-		config_reg->CONFIG_ILSR4 = ESM_ILSR4_CONFIGVALUE;
+		config_reg->ESM_CONFIG_EEPAPR1 = ESM_EEPAPR1_CONFIGVALUE;
+		config_reg->ESM_CONFIG_IESR1 = ESM_IESR1_CONFIGVALUE;
+		config_reg->ESM_CONFIG_ILSR1 = ESM_ILSR1_CONFIGVALUE;
+		config_reg->ESM_CONFIG_LTCPR = ESM_LTCPR_CONFIGVALUE;
+		config_reg->ESM_CONFIG_EKR = ESM_EKR_CONFIGVALUE;
+		config_reg->ESM_CONFIG_IEPSR4 = ESM_IEPSR4_CONFIGVALUE;
+		config_reg->ESM_CONFIG_IESR4 = ESM_IESR4_CONFIGVALUE;
+		config_reg->ESM_CONFIG_ILSR4 = ESM_ILSR4_CONFIGVALUE;
 	}
 	else
 	{
 	/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */
-		config_reg->CONFIG_EEPAPR1 = esmREG->EEPAPR1;
-		config_reg->CONFIG_IESR1 = esmREG->IESR1;
-		config_reg->CONFIG_ILSR1 = esmREG->ILSR1;
-		config_reg->CONFIG_LTCPR = esmREG->LTCPR;
-		config_reg->CONFIG_EKR = esmREG->EKR;
-		config_reg->CONFIG_IEPSR4 = esmREG->IEPSR4;
-		config_reg->CONFIG_IESR4 = esmREG->IESR4;
-		config_reg->CONFIG_ILSR4 = esmREG->ILSR4;
+		config_reg->ESM_CONFIG_EEPAPR1 = esmREG->EEPAPR1;
+		config_reg->ESM_CONFIG_IESR1 = esmREG->IESR1;
+		config_reg->ESM_CONFIG_ILSR1 = esmREG->ILSR1;
+		config_reg->ESM_CONFIG_LTCPR = esmREG->LTCPR;
+		config_reg->ESM_CONFIG_EKR = esmREG->EKR;
+		config_reg->ESM_CONFIG_IEPSR4 = esmREG->IEPSR4;
+		config_reg->ESM_CONFIG_IESR4 = esmREG->IESR4;
+		config_reg->ESM_CONFIG_ILSR4 = esmREG->ILSR4;
 	}
 }
 

@@ -289,15 +289,15 @@ typedef volatile struct
 
 typedef struct dma_config_reg
 {
-    uint32 CONFIG_CHPRIOS;
-    uint32 CONFIG_GCHIENAS;
-    uint32 CONFIG_DREQASI[8U];
-    uint32 CONFIG_FTCINTENAS;
-    uint32 CONFIG_LFSINTENAS;
-    uint32 CONFIG_HBCINTENAS;
-    uint32 CONFIG_BTCINTENAS;
-    uint32 CONFIG_DMAPCR;
-    uint32 CONFIG_DMAMPCTRL;
+    uint32 DMA_CONFIG_CHPRIOS;
+    uint32 DMA_CONFIG_GCHIENAS;
+    uint32 DMA_CONFIG_DREQASI[8U];
+    uint32 DMA_CONFIG_FTCINTENAS;
+    uint32 DMA_CONFIG_LFSINTENAS;
+    uint32 DMA_CONFIG_HBCINTENAS;
+    uint32 DMA_CONFIG_BTCINTENAS;
+    uint32 DMA_CONFIG_DMAPCR;
+    uint32 DMA_CONFIG_DMAMPCTRL;
 } dma_config_reg_t;
 
 

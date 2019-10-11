@@ -636,32 +636,32 @@ void sciGetConfigValue(sci_config_reg_t *config_reg, config_value_type_t type)
 {
 	if (type == InitialValue)
 	{
-		config_reg->CONFIG_GCR0      = SCI_GCR0_CONFIGVALUE;
-		config_reg->CONFIG_GCR1      = SCI_GCR1_CONFIGVALUE;
-		config_reg->CONFIG_SETINT    = SCI_SETINT_CONFIGVALUE;
-		config_reg->CONFIG_SETINTLVL = SCI_SETINTLVL_CONFIGVALUE;
-		config_reg->CONFIG_FORMAT    = SCI_FORMAT_CONFIGVALUE;
-		config_reg->CONFIG_BRS       = SCI_BRS_CONFIGVALUE;
-		config_reg->CONFIG_PIO0      = SCI_PIO0_CONFIGVALUE;
-		config_reg->CONFIG_PIO1      = SCI_PIO1_CONFIGVALUE;
-		config_reg->CONFIG_PIO6      = SCI_PIO6_CONFIGVALUE;
-		config_reg->CONFIG_PIO7	     = SCI_PIO7_CONFIGVALUE;
-		config_reg->CONFIG_PIO8      = SCI_PIO8_CONFIGVALUE;
+		config_reg->SCI_CONFIG_GCR0      = SCI_GCR0_CONFIGVALUE;
+		config_reg->SCI_CONFIG_GCR1      = SCI_GCR1_CONFIGVALUE;
+		config_reg->SCI_CONFIG_SETINT    = SCI_SETINT_CONFIGVALUE;
+		config_reg->SCI_CONFIG_SETINTLVL = SCI_SETINTLVL_CONFIGVALUE;
+		config_reg->SCI_CONFIG_FORMAT    = SCI_FORMAT_CONFIGVALUE;
+		config_reg->SCI_CONFIG_BRS       = SCI_BRS_CONFIGVALUE;
+		config_reg->SCI_CONFIG_PIO0      = SCI_PIO0_CONFIGVALUE;
+		config_reg->SCI_CONFIG_PIO1      = SCI_PIO1_CONFIGVALUE;
+		config_reg->SCI_CONFIG_PIO6      = SCI_PIO6_CONFIGVALUE;
+		config_reg->SCI_CONFIG_PIO7	     = SCI_PIO7_CONFIGVALUE;
+		config_reg->SCI_CONFIG_PIO8      = SCI_PIO8_CONFIGVALUE;
 	}
 	else
 	{
 	/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */
-		config_reg->CONFIG_GCR0      = sciREG->GCR0;
-		config_reg->CONFIG_GCR1      = sciREG->GCR1;
-		config_reg->CONFIG_SETINT    = sciREG->SETINT;
-		config_reg->CONFIG_SETINTLVL = sciREG->SETINTLVL;
-		config_reg->CONFIG_FORMAT    = sciREG->FORMAT;
-		config_reg->CONFIG_BRS       = sciREG->BRS;
-		config_reg->CONFIG_PIO0      = sciREG->PIO0;
-		config_reg->CONFIG_PIO1      = sciREG->PIO1;
-		config_reg->CONFIG_PIO6      = sciREG->PIO6;
-		config_reg->CONFIG_PIO7	     = sciREG->PIO7;
-		config_reg->CONFIG_PIO8      = sciREG->PIO8;
+		config_reg->SCI_CONFIG_GCR0      = sciREG->GCR0;
+		config_reg->SCI_CONFIG_GCR1      = sciREG->GCR1;
+		config_reg->SCI_CONFIG_SETINT    = sciREG->SETINT;
+		config_reg->SCI_CONFIG_SETINTLVL = sciREG->SETINTLVL;
+		config_reg->SCI_CONFIG_FORMAT    = sciREG->FORMAT;
+		config_reg->SCI_CONFIG_BRS       = sciREG->BRS;
+		config_reg->SCI_CONFIG_PIO0      = sciREG->PIO0;
+		config_reg->SCI_CONFIG_PIO1      = sciREG->PIO1;
+		config_reg->SCI_CONFIG_PIO6      = sciREG->PIO6;
+		config_reg->SCI_CONFIG_PIO7	     = sciREG->PIO7;
+		config_reg->SCI_CONFIG_PIO8      = sciREG->PIO8;
 	}
 }
 
@@ -687,31 +687,31 @@ void scilinGetConfigValue(sci_config_reg_t *config_reg, config_value_type_t type
 {
 	if (type == InitialValue)
 	{
-		config_reg->CONFIG_GCR0      = SCILIN_GCR0_CONFIGVALUE;
-		config_reg->CONFIG_GCR1      = SCILIN_GCR1_CONFIGVALUE;
-		config_reg->CONFIG_SETINT    = SCILIN_SETINT_CONFIGVALUE;
-		config_reg->CONFIG_SETINTLVL = SCILIN_SETINTLVL_CONFIGVALUE;
-		config_reg->CONFIG_FORMAT    = SCILIN_FORMAT_CONFIGVALUE;
-		config_reg->CONFIG_BRS       = SCILIN_BRS_CONFIGVALUE;
-		config_reg->CONFIG_PIO0      = SCILIN_PIO0_CONFIGVALUE;
-		config_reg->CONFIG_PIO1      = SCILIN_PIO1_CONFIGVALUE;
-		config_reg->CONFIG_PIO6      = SCILIN_PIO6_CONFIGVALUE;
-		config_reg->CONFIG_PIO7	     = SCILIN_PIO7_CONFIGVALUE;
-		config_reg->CONFIG_PIO8      = SCILIN_PIO8_CONFIGVALUE;
+		config_reg->SCI_CONFIG_GCR0      = SCILIN_GCR0_CONFIGVALUE;
+		config_reg->SCI_CONFIG_GCR1      = SCILIN_GCR1_CONFIGVALUE;
+		config_reg->SCI_CONFIG_SETINT    = SCILIN_SETINT_CONFIGVALUE;
+		config_reg->SCI_CONFIG_SETINTLVL = SCILIN_SETINTLVL_CONFIGVALUE;
+		config_reg->SCI_CONFIG_FORMAT    = SCILIN_FORMAT_CONFIGVALUE;
+		config_reg->SCI_CONFIG_BRS       = SCILIN_BRS_CONFIGVALUE;
+		config_reg->SCI_CONFIG_PIO0      = SCILIN_PIO0_CONFIGVALUE;
+		config_reg->SCI_CONFIG_PIO1      = SCILIN_PIO1_CONFIGVALUE;
+		config_reg->SCI_CONFIG_PIO6      = SCILIN_PIO6_CONFIGVALUE;
+		config_reg->SCI_CONFIG_PIO7	     = SCILIN_PIO7_CONFIGVALUE;
+		config_reg->SCI_CONFIG_PIO8      = SCILIN_PIO8_CONFIGVALUE;
 	}
 	else
 	{
 	/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */
-		config_reg->CONFIG_GCR0      = scilinREG->GCR0;
-		config_reg->CONFIG_GCR1      = scilinREG->GCR1;
-		config_reg->CONFIG_SETINT    = scilinREG->SETINT;
-		config_reg->CONFIG_SETINTLVL = scilinREG->SETINTLVL;
-		config_reg->CONFIG_FORMAT    = scilinREG->FORMAT;
-		config_reg->CONFIG_BRS       = scilinREG->BRS;
-		config_reg->CONFIG_PIO0      = scilinREG->PIO0;
-		config_reg->CONFIG_PIO1      = scilinREG->PIO1;
-		config_reg->CONFIG_PIO6      = scilinREG->PIO6;
-		config_reg->CONFIG_PIO7	     = scilinREG->PIO7;
-		config_reg->CONFIG_PIO8      = scilinREG->PIO8;
+		config_reg->SCI_CONFIG_GCR0      = scilinREG->GCR0;
+		config_reg->SCI_CONFIG_GCR1      = scilinREG->GCR1;
+		config_reg->SCI_CONFIG_SETINT    = scilinREG->SETINT;
+		config_reg->SCI_CONFIG_SETINTLVL = scilinREG->SETINTLVL;
+		config_reg->SCI_CONFIG_FORMAT    = scilinREG->FORMAT;
+		config_reg->SCI_CONFIG_BRS       = scilinREG->BRS;
+		config_reg->SCI_CONFIG_PIO0      = scilinREG->PIO0;
+		config_reg->SCI_CONFIG_PIO1      = scilinREG->PIO1;
+		config_reg->SCI_CONFIG_PIO6      = scilinREG->PIO6;
+		config_reg->SCI_CONFIG_PIO7	     = scilinREG->PIO7;
+		config_reg->SCI_CONFIG_PIO8      = scilinREG->PIO8;
 	}
 }

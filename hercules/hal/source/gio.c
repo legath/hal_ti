@@ -436,37 +436,37 @@ void gioGetConfigValue(gio_config_reg_t *config_reg, config_value_type_t type)
 {
     if (type == InitialValue)
     {
-        config_reg->CONFIG_INTDET    = GIO_INTDET_CONFIGVALUE;
-        config_reg->CONFIG_POL       = GIO_POL_CONFIGVALUE;
-        config_reg->CONFIG_INTENASET = GIO_INTENASET_CONFIGVALUE;
-        config_reg->CONFIG_LVLSET    = GIO_LVLSET_CONFIGVALUE;
+        config_reg->GIO_CONFIG_INTDET    = GIO_INTDET_CONFIGVALUE;
+        config_reg->GIO_CONFIG_POL       = GIO_POL_CONFIGVALUE;
+        config_reg->GIO_CONFIG_INTENASET = GIO_INTENASET_CONFIGVALUE;
+        config_reg->GIO_CONFIG_LVLSET    = GIO_LVLSET_CONFIGVALUE;
 
-        config_reg->CONFIG_PORTADIR    = GIO_PORTADIR_CONFIGVALUE;
-        config_reg->CONFIG_PORTAPDR    = GIO_PORTAPDR_CONFIGVALUE;
-        config_reg->CONFIG_PORTAPSL    = GIO_PORTAPSL_CONFIGVALUE;
-        config_reg->CONFIG_PORTAPULDIS = GIO_PORTAPULDIS_CONFIGVALUE;
+        config_reg->GIO_CONFIG_PORTADIR    = GIO_PORTADIR_CONFIGVALUE;
+        config_reg->GIO_CONFIG_PORTAPDR    = GIO_PORTAPDR_CONFIGVALUE;
+        config_reg->GIO_CONFIG_PORTAPSL    = GIO_PORTAPSL_CONFIGVALUE;
+        config_reg->GIO_CONFIG_PORTAPULDIS = GIO_PORTAPULDIS_CONFIGVALUE;
 
-        config_reg->CONFIG_PORTBDIR    = GIO_PORTBDIR_CONFIGVALUE;
-        config_reg->CONFIG_PORTBPDR    = GIO_PORTBPDR_CONFIGVALUE;
-        config_reg->CONFIG_PORTBPSL    = GIO_PORTBPSL_CONFIGVALUE;
-        config_reg->CONFIG_PORTBPULDIS = GIO_PORTBPULDIS_CONFIGVALUE;
+        config_reg->GIO_CONFIG_PORTBDIR    = GIO_PORTBDIR_CONFIGVALUE;
+        config_reg->GIO_CONFIG_PORTBPDR    = GIO_PORTBPDR_CONFIGVALUE;
+        config_reg->GIO_CONFIG_PORTBPSL    = GIO_PORTBPSL_CONFIGVALUE;
+        config_reg->GIO_CONFIG_PORTBPULDIS = GIO_PORTBPULDIS_CONFIGVALUE;
     }
     else
     {
     /*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */
-        config_reg->CONFIG_INTDET    = gioREG->INTDET;
-        config_reg->CONFIG_POL       = gioREG->POL;
-        config_reg->CONFIG_INTENASET = gioREG->ENASET;
-        config_reg->CONFIG_LVLSET    = gioREG->LVLSET;
+        config_reg->GIO_CONFIG_INTDET    = gioREG->INTDET;
+        config_reg->GIO_CONFIG_POL       = gioREG->POL;
+        config_reg->GIO_CONFIG_INTENASET = gioREG->ENASET;
+        config_reg->GIO_CONFIG_LVLSET    = gioREG->LVLSET;
 
-        config_reg->CONFIG_PORTADIR    = gioPORTA->DIR;
-        config_reg->CONFIG_PORTAPDR    = gioPORTA->PDR;
-        config_reg->CONFIG_PORTAPSL    = gioPORTA->PSL;
-        config_reg->CONFIG_PORTAPULDIS = gioPORTA->PULDIS;
+        config_reg->GIO_CONFIG_PORTADIR    = gioPORTA->DIR;
+        config_reg->GIO_CONFIG_PORTAPDR    = gioPORTA->PDR;
+        config_reg->GIO_CONFIG_PORTAPSL    = gioPORTA->PSL;
+        config_reg->GIO_CONFIG_PORTAPULDIS = gioPORTA->PULDIS;
     /*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */
-        config_reg->CONFIG_PORTBDIR    = gioPORTB->DIR;
-        config_reg->CONFIG_PORTBPDR    = gioPORTB->PDR;
-        config_reg->CONFIG_PORTBPSL    = gioPORTB->PSL;
-        config_reg->CONFIG_PORTBPULDIS = gioPORTB->PULDIS;
+        config_reg->GIO_CONFIG_PORTBDIR    = gioPORTB->DIR;
+        config_reg->GIO_CONFIG_PORTBPDR    = gioPORTB->PDR;
+        config_reg->GIO_CONFIG_PORTBPSL    = gioPORTB->PSL;
+        config_reg->GIO_CONFIG_PORTBPULDIS = gioPORTB->PULDIS;
     }
 }

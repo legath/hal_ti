@@ -221,14 +221,14 @@ typedef enum dwwdWindowSizeTag
 /* Configuration registers */
 typedef struct rti_config_reg
 {
-    uint32 CONFIG_GCTRL;
-    uint32 CONFIG_TBCTRL;
-    uint32 CONFIG_CAPCTRL;
-    uint32 CONFIG_COMPCTRL;
-    uint32 CONFIG_UDCP0;
-    uint32 CONFIG_UDCP1;
-    uint32 CONFIG_UDCP2;
-    uint32 CONFIG_UDCP3;
+    uint32 RTI_CONFIG_GCTRL;
+    uint32 RTI_CONFIG_TBCTRL;
+    uint32 RTI_CONFIG_CAPCTRL;
+    uint32 RTI_CONFIG_COMPCTRL;
+    uint32 RTI_CONFIG_UDCP0;
+    uint32 RTI_CONFIG_UDCP1;
+    uint32 RTI_CONFIG_UDCP2;
+    uint32 RTI_CONFIG_UDCP3;
 } rti_config_reg_t;
 
 

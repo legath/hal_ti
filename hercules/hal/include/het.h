@@ -310,19 +310,19 @@ typedef struct hetSignal
 /* Configuration registers */
 typedef struct het_config_reg
 {
-    uint32 CONFIG_GCR;
-    uint32 CONFIG_PFR;
-    uint32 CONFIG_INTENAS;
-    uint32 CONFIG_INTENAC;
-    uint32 CONFIG_PRY;
-    uint32 CONFIG_AND;
-    uint32 CONFIG_HRSH;
-    uint32 CONFIG_XOR;
-    uint32 CONFIG_DIR;
-    uint32 CONFIG_PDR;
-	uint32 CONFIG_PULDIS;
-	uint32 CONFIG_PSL;
-	uint32 CONFIG_PCR;
+    uint32 HET_CONFIG_GCR;
+    uint32 HET_CONFIG_PFR;
+    uint32 HET_CONFIG_INTENAS;
+    uint32 HET_CONFIG_INTENAC;
+    uint32 HET_CONFIG_PRY;
+    uint32 HET_CONFIG_AND;
+    uint32 HET_CONFIG_HRSH;
+    uint32 HET_CONFIG_XOR;
+    uint32 HET_CONFIG_DIR;
+    uint32 HET_CONFIG_PDR;
+	uint32 HET_CONFIG_PULDIS;
+	uint32 HET_CONFIG_PSL;
+	uint32 HET_CONFIG_PCR;
 } het_config_reg_t;
 
 

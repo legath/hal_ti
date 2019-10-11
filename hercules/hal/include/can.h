@@ -609,17 +609,17 @@ typedef enum canloopBackType
 /* Configuration registers */
 typedef struct can_config_reg
 {
-    uint32 CONFIG_CTL;
-    uint32 CONFIG_ES;
-    uint32 CONFIG_BTR;
-    uint32 CONFIG_TEST;
-    uint32 CONFIG_ABOTR;
-    uint32 CONFIG_INTMUX0;
-    uint32 CONFIG_INTMUX1;
-    uint32 CONFIG_INTMUX2;
-    uint32 CONFIG_INTMUX3;
-    uint32 CONFIG_TIOC;
-    uint32 CONFIG_RIOC;
+    uint32 CAN_CONFIG_CTL;
+    uint32 CAN_CONFIG_ES;
+    uint32 CAN_CONFIG_BTR;
+    uint32 CAN_CONFIG_TEST;
+    uint32 CAN_CONFIG_ABOTR;
+    uint32 CAN_CONFIG_INTMUX0;
+    uint32 CAN_CONFIG_INTMUX1;
+    uint32 CAN_CONFIG_INTMUX2;
+    uint32 CAN_CONFIG_INTMUX3;
+    uint32 CAN_CONFIG_TIOC;
+    uint32 CAN_CONFIG_RIOC;
 } can_config_reg_t;
 
 

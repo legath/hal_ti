@@ -2090,30 +2090,30 @@ void pbistGetConfigValue(pbist_config_reg_t *config_reg, config_value_type_t typ
 {
     if (type == InitialValue)
     {
-        config_reg->CONFIG_RAMT = PBIST_RAMT_CONFIGVALUE;
-        config_reg->CONFIG_DLR = PBIST_DLR_CONFIGVALUE;
-        config_reg->CONFIG_PACT = PBIST_PACT_CONFIGVALUE;
-        config_reg->CONFIG_PBISTID = PBIST_PBISTID_CONFIGVALUE;
-        config_reg->CONFIG_OVER = PBIST_OVER_CONFIGVALUE;
-        config_reg->CONFIG_FSRDL1 = PBIST_FSRDL1_CONFIGVALUE;
-        config_reg->CONFIG_ROM = PBIST_ROM_CONFIGVALUE;
-        config_reg->CONFIG_ALGO = PBIST_ALGO_CONFIGVALUE;
-        config_reg->CONFIG_RINFOL = PBIST_RINFOL_CONFIGVALUE;
-        config_reg->CONFIG_RINFOU = PBIST_RINFOU_CONFIGVALUE;
+        config_reg->PBIST_CONFIG_RAMT = PBIST_RAMT_CONFIGVALUE;
+        config_reg->PBIST_CONFIG_DLR = PBIST_DLR_CONFIGVALUE;
+        config_reg->PBIST_CONFIG_PACT = PBIST_PACT_CONFIGVALUE;
+        config_reg->PBIST_CONFIG_PBISTID = PBIST_PBISTID_CONFIGVALUE;
+        config_reg->PBIST_CONFIG_OVER = PBIST_OVER_CONFIGVALUE;
+        config_reg->PBIST_CONFIG_FSRDL1 = PBIST_FSRDL1_CONFIGVALUE;
+        config_reg->PBIST_CONFIG_ROM = PBIST_ROM_CONFIGVALUE;
+        config_reg->PBIST_CONFIG_ALGO = PBIST_ALGO_CONFIGVALUE;
+        config_reg->PBIST_CONFIG_RINFOL = PBIST_RINFOL_CONFIGVALUE;
+        config_reg->PBIST_CONFIG_RINFOU = PBIST_RINFOU_CONFIGVALUE;
     }
     else
     {
     /*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */
-        config_reg->CONFIG_RAMT = pbistREG->RAMT;
-        config_reg->CONFIG_DLR = pbistREG->DLR;
-        config_reg->CONFIG_PACT = pbistREG->PACT;
-        config_reg->CONFIG_PBISTID = pbistREG->PBISTID;
-        config_reg->CONFIG_OVER = pbistREG->OVER;
-        config_reg->CONFIG_FSRDL1 = pbistREG->FSRDL1;
-        config_reg->CONFIG_ROM = pbistREG->ROM;
-        config_reg->CONFIG_ALGO = pbistREG->ALGO;
-        config_reg->CONFIG_RINFOL = pbistREG->RINFOL;
-        config_reg->CONFIG_RINFOU = pbistREG->RINFOU;
+        config_reg->PBIST_CONFIG_RAMT = pbistREG->RAMT;
+        config_reg->PBIST_CONFIG_DLR = pbistREG->DLR;
+        config_reg->PBIST_CONFIG_PACT = pbistREG->PACT;
+        config_reg->PBIST_CONFIG_PBISTID = pbistREG->PBISTID;
+        config_reg->PBIST_CONFIG_OVER = pbistREG->OVER;
+        config_reg->PBIST_CONFIG_FSRDL1 = pbistREG->FSRDL1;
+        config_reg->PBIST_CONFIG_ROM = pbistREG->ROM;
+        config_reg->PBIST_CONFIG_ALGO = pbistREG->ALGO;
+        config_reg->PBIST_CONFIG_RINFOL = pbistREG->RINFOL;
+        config_reg->PBIST_CONFIG_RINFOU = pbistREG->RINFOU;
     }
 }
 
@@ -2135,18 +2135,18 @@ void stcGetConfigValue(stc_config_reg_t *config_reg, config_value_type_t type)
 {
     if (type == InitialValue)
     {
-        config_reg->CONFIG_STCGCR0 = STC_STCGCR0_CONFIGVALUE;
-        config_reg->CONFIG_STCGCR1 = STC_STCGCR1_CONFIGVALUE;
-        config_reg->CONFIG_STCTPR = STC_STCTPR_CONFIGVALUE;
-        config_reg->CONFIG_STCSCSCR = STC_STCSCSCR_CONFIGVALUE;
+        config_reg->STC_CONFIG_STCGCR0 = STC_STCGCR0_CONFIGVALUE;
+        config_reg->STC_CONFIG_STCGCR1 = STC_STCGCR1_CONFIGVALUE;
+        config_reg->STC_CONFIG_STCTPR = STC_STCTPR_CONFIGVALUE;
+        config_reg->STC_CONFIG_STCSCSCR = STC_STCSCSCR_CONFIGVALUE;
     }
     else
     {
     /*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */
-        config_reg->CONFIG_STCGCR0 = stcREG->STCGCR0;
-        config_reg->CONFIG_STCGCR1 = stcREG->STCGCR1;
-        config_reg->CONFIG_STCTPR = stcREG->STCTPR;
-        config_reg->CONFIG_STCSCSCR = stcREG->STCSCSCR;
+        config_reg->STC_CONFIG_STCGCR0 = stcREG->STCGCR0;
+        config_reg->STC_CONFIG_STCGCR1 = stcREG->STCGCR1;
+        config_reg->STC_CONFIG_STCTPR = stcREG->STCTPR;
+        config_reg->STC_CONFIG_STCSCSCR = stcREG->STCSCSCR;
     }
 }
 
@@ -2169,18 +2169,18 @@ void efcGetConfigValue(efc_config_reg_t *config_reg, config_value_type_t type)
 {
     if (type == InitialValue)
     {
-        config_reg->CONFIG_BOUNDARY = EFC_BOUNDARY_CONFIGVALUE;
-        config_reg->CONFIG_PINS = EFC_PINS_CONFIGVALUE;
-        config_reg->CONFIG_SELFTESTCYCLES = EFC_SELFTESTCYCLES_CONFIGVALUE;
-        config_reg->CONFIG_SELFTESTSIGN = EFC_SELFTESTSIGN_CONFIGVALUE;
+        config_reg->EFC_CONFIG_BOUNDARY = EFC_BOUNDARY_CONFIGVALUE;
+        config_reg->EFC_CONFIG_PINS = EFC_PINS_CONFIGVALUE;
+        config_reg->EFC_CONFIG_SELFTESTCYCLES = EFC_SELFTESTCYCLES_CONFIGVALUE;
+        config_reg->EFC_CONFIG_SELFTESTSIGN = EFC_SELFTESTSIGN_CONFIGVALUE;
     }
     else
     {
     /*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */
-        config_reg->CONFIG_BOUNDARY = efcREG->BOUNDARY;
-        config_reg->CONFIG_PINS = efcREG->PINS;
-        config_reg->CONFIG_SELFTESTCYCLES = efcREG->SELF_TEST_CYCLES;
-        config_reg->CONFIG_SELFTESTSIGN = efcREG->SELF_TEST_SIGN;
+        config_reg->EFC_CONFIG_BOUNDARY = efcREG->BOUNDARY;
+        config_reg->EFC_CONFIG_PINS = efcREG->PINS;
+        config_reg->EFC_CONFIG_SELFTESTCYCLES = efcREG->SELF_TEST_CYCLES;
+        config_reg->EFC_CONFIG_SELFTESTSIGN = efcREG->SELF_TEST_SIGN;
     }
 }
 
@@ -2203,12 +2203,12 @@ void ccmr4GetConfigValue(ccmr4_config_reg_t *config_reg, config_value_type_t typ
 {
     if (type == InitialValue)
     {
-        config_reg->CONFIG_CCMKEYR = CCMR4_CCMKEYR_CONFIGVALUE;
+        config_reg->CCMR4_CONFIG_CCMKEYR = CCMR4_CCMKEYR_CONFIGVALUE;
     }
     else
     {
     /*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */
-        config_reg->CONFIG_CCMKEYR = CCMKEYR;
+        config_reg->CCMR4_CONFIG_CCMKEYR = CCMKEYR;
     }
 }
 
