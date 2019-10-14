@@ -63,6 +63,8 @@ typedef volatile struct vimRam
 
 #define vimRAM ((vimRAM_t *)0xFFF82000U)
 
+#if 0
+/* NOTE: Zephyr interrupt vector table is used to initialise the VIM memory. */
 static const t_isrFuncPTR s_vim_init[128U] =
 {
     &phantomInterrupt,
@@ -194,6 +196,10 @@ static const t_isrFuncPTR s_vim_init[128U] =
     &phantomInterrupt,            /* Channel 125 */
     &phantomInterrupt,            /* Channel 126 */
 };
+#else
+extern uint32 _irq_vector_table[];
+#endif
+
 void vimParityErrorHandler(void);
 
 /** @fn void vimInit(void)
@@ -213,9 +219,11 @@ void vimInit(void)
     {
         uint32 i;
 
-        for (i = 0U; i < VIM_CHANNELS; i++)
+        vimRAM->ISR[0] = &phantomInterrupt;
+
+        for (i = 1U; i < VIM_CHANNELS; i++)
         {
-            vimRAM->ISR[i] = s_vim_init[i];
+            vimRAM->ISR[i] = (void *)_irq_vector_table[i - 1];
         }
     }
 
@@ -762,7 +770,7 @@ void vimParityErrorHandler(void)
     uint32 error_channel = ((error_addr & 0x1FFU) >> 2U);
 
     /* Correct the corrupted location */
-    vimRAM->ISR[error_channel] = s_vim_init[error_channel];
+    vimRAM->ISR[error_channel] = (void *)_irq_vector_table[error_channel];
 
     /* Clear Parity Error Flag */
     VIM_PARFLG = 1U;
