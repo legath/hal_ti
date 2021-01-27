@@ -9,6 +9,8 @@
 #include <kernel/zephyr/dpl/dpl.h>
 #include <ti/drivers/dpl/SemaphoreP.h>
 
+#include "stubs.h"
+
 /*
  * Zephyr kernel object pools:
  *
@@ -46,21 +48,16 @@ static SemaphoreP_Status dpl_sem_pool_free(struct k_sem *sem)
 }
 
 /* timeout comes in and out as milliSeconds: */
-static int32_t dpl_convert_timeout(uint32_t timeout)
+static k_timeout_t dpl_convert_timeout(uint32_t timeout)
 {
-	int32_t zephyr_timeout;
-
 	switch(timeout) {
 	case SemaphoreP_NO_WAIT:
-		zephyr_timeout = K_NO_WAIT;
-		break;
+		return K_NO_WAIT;
 	case SemaphoreP_WAIT_FOREVER:
-		zephyr_timeout = K_FOREVER;
-		break;
+		return K_FOREVER;
 	default:
-		zephyr_timeout = timeout;
+		return K_MSEC(timeout);
 	}
-	return zephyr_timeout;
 }
 
 
@@ -77,7 +74,7 @@ SemaphoreP_Handle SemaphoreP_create(unsigned int count,
 
 	sem = dpl_sem_pool_alloc();
 	if (sem) {
-		k_sem_init(sem, 0, limit);
+		k_sem_init(sem, count, limit);
 	}
 
 	return (SemaphoreP_Handle)sem;
@@ -137,4 +134,41 @@ SemaphoreP_Status SemaphoreP_pend(SemaphoreP_Handle handle, uint32_t timeout)
 void SemaphoreP_post(SemaphoreP_Handle handle)
 {
 	k_sem_give((struct k_sem *)handle);
+}
+
+SemaphoreP_Handle SemaphoreP_construct(SemaphoreP_Struct *handle,
+                    unsigned int count, SemaphoreP_Params *params)
+{
+    unsigned int limit = UINT_MAX;
+    struct k_sem *sem;
+
+    if (params) {
+        limit = (params->mode == SemaphoreP_Mode_BINARY) ?
+            1 : UINT_MAX;
+    }
+
+    sem = (struct k_sem *)handle;
+    if (sem) {
+        k_sem_init(sem, count, limit);
+    }
+
+    return (SemaphoreP_Handle)sem;
+}
+
+SemaphoreP_Handle SemaphoreP_constructBinary(SemaphoreP_Struct *handle, unsigned int count) {
+    SemaphoreP_Params params;
+
+    SemaphoreP_Params_init(&params);
+    params.mode = SemaphoreP_Mode_BINARY;
+
+    return (SemaphoreP_construct(handle, count, &params));
+}
+
+void SemaphoreP_destruct(SemaphoreP_Struct *semP) {
+    struct k_sem *sem;
+
+    sem = (struct k_sem *)semP->data;
+    if (sem) {
+        k_sem_reset(sem);
+    }
 }
